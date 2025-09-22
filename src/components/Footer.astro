@@ -4,6 +4,7 @@ import { siteConfig } from "../config";
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
 ---
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
@@ -158,6 +159,17 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               </a>
             )
           }
+          {
+            hasCerts && (
+              <a
+                href="#certificates"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Certificates
+              </a>
+            )
+          }
+
         </nav>
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()}

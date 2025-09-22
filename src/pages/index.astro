@@ -5,6 +5,7 @@ import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
+import CertificateGallery from "../components/CertificateGallery";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
@@ -42,6 +43,7 @@ import "../styles/global.css";
       <Projects />
       <Experience />
       <Education />
+      <CertificateGallery client:load />
     </section>
     <Footer />
   </body>

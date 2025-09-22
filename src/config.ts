@@ -102,4 +102,72 @@ export const siteConfig = {
       ],
     },
   ],
+  certificates: [
+    {
+      name: "Transcript",
+      thumbnail: "/certs/transcript.jpeg",   // smaller preview image
+      file: "/certs/transcript.jpeg"               // full-size or PDF
+    },
+    {
+      name: "Oracle Cloud Foundations",
+      thumbnail: "/certs/oracle foundations.jpeg",   // smaller preview image
+      file: "/certs/oracle foundations.jpeg"               // full-size or PDF
+    },
+    {
+      name: "Oracle Cloud AI Foundations",
+      thumbnail: "/certs/oracle ai.jpeg",   // smaller preview image
+      file: "/certs/oracle ai.jpeg"               // full-size or PDF
+    },
+    {
+      name: "Cybersecurity CC Course ISC 2024",
+      thumbnail: "/certs/cybersecurity.jpg",
+      file: "/certs/cybersecurity.jpg"
+    },
+    {
+      name: "Fundatmentals of OT Cybersecurity (ICS/SCADA)",
+      thumbnail: "/certs/fundamentalsOTsecurity.jpg",
+      file: "/certs/fundamentalsOTsecurity.jpg"
+    },
+    {
+      name: "Problem Solving through Programming in C - IIT Madras - TOP 5% National Level",
+      thumbnail: "/certs/problemsolvingc.png",
+      file: "/certs/problemsolvingc.png"
+    },
+    {
+      name: "Programming, Data Structures and Algorithms using Python - IIT Madras",
+      thumbnail: "/certs/pythondatastructures.png",
+      file: "/certs/pythondatastructures.png"
+    },
+    {
+      name: "Angular - HackerRank",
+      thumbnail: "/certs/angular.png",   // smaller preview image
+      file: "/certs/angular.png"               // full-size or PDF
+    },
+    {
+      name: "C - HackerRank",
+      thumbnail: "/certs/c.png",
+      file: "/certs/c.png"
+    },
+    {
+      name: "Python - HackerRank",
+      thumbnail: "/certs/python.png",
+      file: "/certs/python.png"
+    },
+    {
+      name: "Rest API - HackerRank",
+      thumbnail: "/certs/restapi.png",
+      file: "/certs/restapi.png"
+    },
+    {
+      name: "SQL - HackerRank",
+      thumbnail: "/certs/sql.png",
+      file: "/certs/sql.png"
+    },
+    {
+      name: "IEC 61850 Digital Substation Basics",
+      thumbnail: "/certs/substation.jpg",
+      file: "/certs/substation.jpg"
+    }
+  ]
+
 };
