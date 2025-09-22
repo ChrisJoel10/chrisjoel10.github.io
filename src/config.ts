@@ -49,7 +49,7 @@ export const siteConfig = {
     {
       company: "University of New Brunswick, Fredericton, Canada",
       title: "Graduate Research Assistant",
-      dateRange: "January 2025 - April 2025",
+      dateRange: "Jan 2025 - Apr 2025 (4 months)",
       bullets: [
         "Used Python and Google’s Tesseract OCR engine to extract and curate datasets from MIT OpenCourseWare PDFs for training language models.",
         "Applied prompt engineering and fine-tuning techniques to evaluate LLMs (e.g., GPT-4o, Gemini) and benchmark performance",
@@ -58,7 +58,7 @@ export const siteConfig = {
     {
       company: "Seimens, Fredericton, Canada",
       title: "AI and Cybersecurity Research Intern",
-      dateRange: "May 2024 - Dec 2024",
+      dateRange: "May 2024 - Dec 2024 (8 months)",
       bullets: [
         "Conducted R&D on language models (OpenAI GPT-4o, LLAMA, Mistral), including prompt engineering and fine-tuning custom models for cybersecurity applications",
         "Built and deployed a chat-based web application implementing Retrieval-Augmented Generation (RAG) with LangChain, using a React.js front-end and Flask API back-end, hosted on Microsoft Azure",
@@ -68,16 +68,15 @@ export const siteConfig = {
     {
       company: "GEP Worldwide, Mumbai, India",
       title: "Software Engineer",
-      dateRange: "June 2021 - Aug 2023",
+      dateRange: "Jun 2021 - Aug 2023 (2 years 3 months)",
       bullets: [
         "Delivered enterprise-grade software solutions for clients including Bank of America, Roche, Dupont, and Lenovo, supporting high-availability systems in regulated industries",
         "Built and deployed full stack web applications (AngularJS, ReactJs, C#, .NET Framework, MySQL, MongoDB) with RESTful microservices, reducing system integration time by ~20%",
         "Optimized databases with millions of records, improving query performance and cutting data retrieval time by up to 40%",
         "Implemented authentication and authorization workflows (SSO and non-SSO) with Azure Active Directory, strengthening security and role-based access across applications",
-        "Achieved WCAG 2.1 compliance for client-facing applications, improving accessibility for 10,000+ users",
+        "Achieved WCAG 2.1 compliance for client-facing applications by ensuring full keyboard operability and screen reader compatibility, improving accessibility for 10,000+ users.",
         "Containerized applications with Docker and orchestrated deployments with Kubernetes, ensuring scalable and reliable delivery in Azure Cloud environments",
         "Automated build, test, and deployment workflows with Azure DevOps CI/CD, reducing manual release effort by ~70% and increasing deployment reliability",
-
       ],
     },
   ],
