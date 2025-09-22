@@ -25,7 +25,7 @@ export const siteConfig = {
       description:
         "A responsive web app that helps Students and Teachers manage, assign and keep track of their daily tasks, including role-based authentication system with three access levels: Teacher, Student, and Admin",
       link: "https://github.com/ChrisJoel10/Student-Task-Manager",
-      skills: ["ReactJs", "ExpressJs", "MySql"],
+      skills: ["ReactJs", "ExpressJs", "NodeJs", "MySql"],
     },
     {
       name: "Hypernym Generation using generative LLM",
