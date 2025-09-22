@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Chris Joel Yesudhas",
-  title: "SOftware Developer",
+  title: "Software Developer",
   description: "Portfolio website of Chris Joel Yesudhas",
   accentColor: "#1d4ed8",
   social: {
