@@ -22,18 +22,6 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
         </a>
       </li>
       {
-        hasProjects && (
-          <li>
-            <a
-              href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Projects
-            </a>
-          </li>
-        )
-      }
-      {
         hasExperience && (
           <li>
             <a
@@ -58,7 +46,19 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
         )
       }
       {
-        hasEducation && (
+        hasProjects && (
+          <li>
+            <a
+              href="#projects"
+              class="text-gray-700 hover:text-black transition-colors font-medium"
+            >
+              Projects
+            </a>
+          </li>
+        )
+      }
+      {
+        hasCerts && (
           <li>
             <a
               href="#certificates"

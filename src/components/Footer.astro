@@ -130,16 +130,6 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
             >About</a
           >
           {
-            hasProjects && (
-              <a
-                href="#projects"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                Projects
-              </a>
-            )
-          }
-          {
             hasExperience && (
               <a
                 href="#experience"
@@ -156,6 +146,16 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
                 Education
+              </a>
+            )
+          }
+                    {
+            hasProjects && (
+              <a
+                href="#projects"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Projects
               </a>
             )
           }
