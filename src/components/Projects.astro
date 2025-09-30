@@ -39,6 +39,10 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
                           : ""
                       }`}
+                        onclick={`window.gtag && window.gtag('event', 'click_project_link', {
+                          event_category: 'engagement',
+                          event_label: '${project.name}',
+                        })`}
                     >
                       {project.link && (
                         <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">

@@ -32,6 +32,17 @@ export default function CertificatesSection() {
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [popupOpen]);
+    
+    useEffect(() => {
+      if (popupOpen && window.gtag) {
+        const cert = siteConfig.certificates[currentIndex];
+        window.gtag("event", "view_certificate", {
+          event_category: "engagement",
+          event_label: cert.name,
+        });
+      }
+    }, [currentIndex, popupOpen]);
+
 
     if (!hasCerts) return null;
 
