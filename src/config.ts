@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   aboutMe:
     "Software Developer and AI Researcher with 3+ years of experience at GEP, Siemens Canada, and UNB, with experience in Software Development, Generative AI, AI agents, RAG, and LLM integration with enterprise systems. Earned a Master’s in Computer Science with a perfect 4.3 GPA",
-  skills: ["Javascript", "AngularJs", "C#", ".net", "React", "Node.js", "Python", "C/C++", "Azure", "CI/CD Automation", "Full-Stack", "Docker", "AI/ML", "Cybersecurity"],
+  skills: ["Javascript", "AngularJs", "React", "Node.js", "C#", ".net", "Java", "Springboot", "Python", "C/C++", "Azure", "CI/CD Automation", "Full-Stack", "Docker", "AI/ML", "Cybersecurity"],
   projects: [
     {
       name: "Canadian Law Benchmark Dataset",
