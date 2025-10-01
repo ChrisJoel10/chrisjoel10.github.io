@@ -2,37 +2,42 @@
 import { useEffect } from "react";
 
 interface SectionTrackerProps {
-  sectionIds?: string[]; // IDs of sections to track
+  sectionIds?: string[];
 }
 
 export default function SectionTracker({
-  sectionIds = ["about", "projects", "certificates", "experience", "education"],
+  sectionIds = ["about", "experience", "education", "projects", "certificates", "techStack"],
 }: SectionTrackerProps) {
   useEffect(() => {
-    // IntersectionObserver to track section views
+    const navLinks = sectionIds.map(
+      (id) => document.querySelector<HTMLAnchorElement>(`header nav a[href="#${id}"]`)
+    );
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && window.gtag) {
+          if (entry.isIntersecting) {
             const id = entry.target.id;
-            // console.log(`Section in view: ${id}`);
-            window.gtag("event", "section_view", {
-              event_category: "engagement",
-              event_label: id,
-            });
+
+            // Remove "active" from all links
+            navLinks.forEach((link) => link?.classList.remove("active"));
+
+            // Add "active" to current link
+            const activeLink = document.querySelector<HTMLAnchorElement>(
+              `header nav a[href="#${id}"]`
+            );
+            activeLink?.classList.add("active");
           }
         });
       },
-      { threshold: 0.1 } // 50% visible triggers event
+      { threshold: 0.2 }
     );
 
-    // Observe each section
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
 
-    // Cleanup on unmount
     return () => {
       sectionIds.forEach((id) => {
         const el = document.getElementById(id);
@@ -41,5 +46,5 @@ export default function SectionTracker({
     };
   }, [sectionIds]);
 
-  return null; // No visible UI
+  return null;
 }

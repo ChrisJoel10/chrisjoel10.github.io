@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   aboutMe:
     "Software Developer and AI Researcher with 3+ years of experience at GEP, Siemens Canada, and UNB, with experience in Software Development, Generative AI, AI agents, RAG, and LLM integration with enterprise systems. Earned a Master’s in Computer Science with a perfect 4.3 GPA",
-  skills: ["Javascript", "AngularJs", "React", "Node.js", "C#", ".net", "Java", "Springboot", "Python", "C/C++", "Azure", "CI/CD Automation", "Full-Stack", "Docker", "AI/ML", "Cybersecurity"],
+  skills: ["Software Development", "Full-Stack Web Development", "Javascript", "AngularJs", "React", "Node.js", "C#", ".net", "Java", "Springboot", "Python", "C/C++", "Azure", "CI/CD Automation", "Docker", "AI/ML", "Cybersecurity"],
   projects: [
     {
       name: "Canadian Law Benchmark Dataset",
@@ -40,7 +40,7 @@ export const siteConfig = {
       skills: ["Python", "Pytorch"]
     },
     {
-      name: "Vehicle Detection Using Densenet", 
+      name: "Vehicle Detection Using Densenet",
       description: "An application built using Python and Deep learning frameworks like TensorFlow and Keras that detects from an input video and adds bounding boxes over detected vehicles",
       skills: ["Python", "Tensorflow", "keras"]
     }
@@ -100,6 +100,95 @@ export const siteConfig = {
         "Finalist – Best Capstone Project Award, Bachelor’s Degree"
       ],
     },
+  ],
+  techStack: [
+    {
+      category: "Backend",
+      skills: [
+        "Node.js",
+        "ExpressJS",
+        "ASP.NET Core",
+        "ASP.NET MVC",
+        "Spring Boot",
+        "Django",
+        "Flask",
+        "WPF",
+        "UWP"
+      ]
+    },
+    {
+      category: "Frontend",
+      skills: [
+        "ReactJs",
+        "AngularJS",
+        "jQuery",
+        "Bootstrap"
+      ]
+    },
+        {
+      category: "Programming Languages",
+      skills: [
+        "Python",
+        "C",
+        "C++",
+        "C#",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "HTML",
+        "CSS",
+        "TypeScript"
+      ]
+    },
+    {
+      category: "DevOps & Cloud",
+      skills: [
+        "Microsoft Azure",
+        "Azure AI Foundry", 
+        "Oracle Cloud (OCI)",
+        "Docker",
+        "Kubernetes",
+        "ELK Stack",
+        "CI/CD Pipelines"
+      ]
+    },
+    {
+      category: "Databases",
+      skills: [
+        "MongoDB",
+        "MySQL",
+        "MS SQL",
+        "NoSQL",
+        "PostgreSQL",
+        "CassandraDB",
+        "Neo4j"
+      ]
+    },
+    {
+      category: "AI/ML & Deep Learning",
+      skills: [
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "scikit-learn",
+        "NumPy",
+        "pandas",
+        "Matplotlib"
+      ]
+    },
+    {
+      category: "Others",
+      skills: [
+        "Git version control",
+        "Agile Development",
+        "REST APIs",
+        "Web Development",
+        "Quality Assurance (QA)",
+        "Unit Testing",
+        "Pub/Sub Architecture",
+        "New Relic"
+      ]
+    }
   ],
   certificates: [
     {
