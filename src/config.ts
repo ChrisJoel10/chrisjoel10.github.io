@@ -64,6 +64,16 @@ export const siteConfig = {
         "Built and deployed a chat-based web application implementing Retrieval-Augmented Generation (RAG) with LangChain, using a React.js front-end and Flask API back-end, hosted on Microsoft Azure",
         "Achieved the highest possible rating of 'Outstanding' in employer evaluations for both co-op terms",
       ],
+      attachments: [
+        {
+          name: "Employer Feedback - Term 1",
+          file: "/certs/Siemens Employer Feedback - Term 1.pdf"
+        },
+        {
+          name: "Employer Feedback - Term 2",
+          file: "/certs/Siemens Employer Feedback - Term 2.pdf"
+        }
+      ]
     },
     {
       company: "GEP Worldwide, Mumbai, India",
@@ -89,6 +99,16 @@ export const siteConfig = {
         "Graduated with a perfect GPA of 4.3/4.3",
         "Course List: Software Requirement Analysis, Natural Language Processing, Applied Graph Algorithmics, Artificial Intelligence, Machine Learning and Data Mining, Software and Network Security"
       ],
+      attachments: [
+        {
+          name: "Degree Certificate",
+          file: "/certs/UNB Masters Degree Certificate.pdf"
+        },
+        {
+          name: "Transcript",
+          file: "/certs/Transcript.pdf"
+        }
+      ]
     },
     {
       school: "Mepco Schlenk Engineering College",
@@ -99,6 +119,16 @@ export const siteConfig = {
         "Academic Excellence Scholarship Award for the academic year 2017 and 2020",
         "Finalist – Best Capstone Project Award, Bachelor’s Degree"
       ],
+      attachments: [
+        {
+          name: "Degree Certificate",
+          file: "/certs/Bachelors Degree Certificate.pdf"
+        },
+                {
+          name: "Transcript",
+          file: "/certs/Bachelors Transcript.pdf"
+        }
+      ]
     },
   ],
   techStack: [
@@ -194,7 +224,7 @@ export const siteConfig = {
     {
       name: "Transcript",
       thumbnail: "/certs/transcript.jpeg",   // smaller preview image
-      file: "/certs/transcript.jpeg"               // full-size or PDF
+      file: "/certs/Transcript.pdf"               // full-size or PDF
     },
     {
       name: "Oracle Cloud Foundations",

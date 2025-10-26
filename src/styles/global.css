@@ -4,11 +4,11 @@ body {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-a {
+.nav-item {
   position: relative;
 }
 
-a::after {
+.nav-item::after {
   content: "";
   position: absolute;
   left: 0;
@@ -21,6 +21,6 @@ a::after {
   transition: transform 0.3s ease-in-out;
 }
 
-a.active::after {
+.nav-item.active::after {
   transform: scaleX(1);
 }
