@@ -30,6 +30,21 @@ export default function Modal({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [open, onClose, onNext, onPrev]);
+  
+  useEffect(() => {
+    if (open) {
+      // Lock scroll
+      document.body.style.overflow = "hidden";
+    } else {
+      // Restore scroll
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
 
   if (!open) return null;
 
