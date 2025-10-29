@@ -56,7 +56,7 @@ export const siteConfig = {
       ],
     },
     {
-      company: "Seimens, Fredericton, Canada",
+      company: "Siemens, Fredericton, Canada",
       title: "AI and Cybersecurity Research Intern",
       dateRange: "May 2024 - Dec 2024 (8 months)",
       bullets: [
