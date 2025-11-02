@@ -257,6 +257,11 @@ export const siteConfig = {
       file: "/certs/pythondatastructures.png"
     },
     {
+      name: "Oracle Data Platform Foundations",
+      thumbnail: "/certs/Orace Data Platform.jpeg",   // smaller preview image
+      file: "/certs/Orace Data Platform.jpeg"               // full-size or PDF
+    },
+    {
       name: "Angular - HackerRank",
       thumbnail: "/certs/angular.png",   // smaller preview image
       file: "/certs/angular.png"               // full-size or PDF
