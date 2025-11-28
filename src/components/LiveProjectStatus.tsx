@@ -77,16 +77,26 @@ export default function LiveProjectStatus({
     return (
         <div className="flex items-center" onMouseEnter={handleMouseEnter}>
             {status === "idle" && (
-                <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full border border-gray-200 text-gray-600 text-sm font-medium cursor-pointer transition-colors hover:bg-gray-200">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <a
+                    href={liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-700 text-sm font-medium transition-all duration-300 hover:bg-gray-50 hover:shadow-sm group"
+                >
+                    <svg className="w-4 h-4 text-gray-500 group-hover:text-gray-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                    Hover to check live status
-                </div>
+                    <span>Live Demo</span>
+                </a>
             )}
 
             {status === "checking" && (
-                <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full border border-gray-200 text-gray-600 text-sm font-medium animate-pulse">
+                <a
+                    href={liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full border border-gray-200 text-gray-600 text-sm font-medium cursor-wait"
+                >
                     <svg
                         className="animate-spin h-4 w-4 text-gray-500"
                         xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +118,7 @@ export default function LiveProjectStatus({
                         ></path>
                     </svg>
                     Checking Status...
-                </div>
+                </a>
             )}
 
             {status === "available" && (
