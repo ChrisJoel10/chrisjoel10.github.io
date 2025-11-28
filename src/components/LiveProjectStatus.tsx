@@ -83,10 +83,15 @@ export default function LiveProjectStatus({
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-700 text-sm font-medium transition-all duration-300 hover:bg-gray-50 hover:shadow-sm group"
                 >
+                    <span className="relative flex h-2.5 w-2.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                    </span>
+
+                    <span>Live Demo</span>
                     <svg className="w-4 h-4 text-gray-500 group-hover:text-gray-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                    <span>Live Demo</span>
                 </a>
             )}
 
