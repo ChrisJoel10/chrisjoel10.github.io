@@ -21,6 +21,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.nav-item.active::after {
+.nav-item.active::after,
+.nav-item:hover::after {
   transform: scaleX(1);
 }

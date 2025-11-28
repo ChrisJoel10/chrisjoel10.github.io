@@ -14,24 +14,33 @@ export const siteConfig = {
   skills: ["Software Development", "Full-Stack Web Development", "Javascript", "AngularJs", "React", "Node.js", "C#", ".net", "Java", "Springboot", "Python", "C/C++", "Azure", "CI/CD Automation", "Docker", "AI/ML", "Cybersecurity"],
   projects: [
     {
+      name: "AI Task Manager",
+      description:
+        "AI-based task manager app with authentication (Google Sign-in), where users can add, edit, and find tasks by talking to an AI assistant powered by Gemini. Upcoming features include voice-enabled access for interactive task management.",
+      github: "https://github.com/ChrisJoel10/ai-task-manager",
+      liveLink: "https://ai-task-manager-demo.vercel.app",
+      status: "Under Development",
+      skills: ["Next.js", "Supabase", "Gemini", "Google Auth", "React"],
+    },
+    {
       name: "Canadian Law Benchmark Dataset",
       description:
         "Built AI agents with LangGraph to automate parsing of Canadian legal documents, generating a benchmark dataset for evaluating LLM performance",
-      link: "https://github.com/ChrisJoel10/Canada-Law-Benchmark-Generation",
+      github: "https://github.com/ChrisJoel10/Canada-Law-Benchmark-Generation",
       skills: ["Python", "Gemini", "GPT-4o", "Selenium", "Webdriver", "LangGraph"],
     },
     {
       name: "Student Task Manager",
       description:
         "A responsive web app that helps Students and Teachers manage, assign and keep track of their daily tasks, including role-based authentication system with three access levels: Teacher, Student, and Admin",
-      link: "https://github.com/ChrisJoel10/Student-Task-Manager",
+      github: "https://github.com/ChrisJoel10/Student-Task-Manager",
       skills: ["ReactJs", "ExpressJs", "NodeJs", "MySql"],
     },
     {
       name: "Hypernym Generation using generative LLM",
       description:
         "Applied advanced natural language processing techniques, leveraging AI models such as XLNet and employing deep learning algorithms to tackle the SemEval-2018 Task 9 Hypernym Discovery",
-      // link: "https://extensionkit.io/?ref=devportfolio",
+      // github: "https://extensionkit.io/?ref=devportfolio",
       skills: ["Python", "Pytorch", "HuggingFace"],
     },
     {
@@ -124,7 +133,7 @@ export const siteConfig = {
           name: "Degree Certificate",
           file: "/certs/Bachelors Degree Certificate.pdf"
         },
-                {
+        {
           name: "Transcript",
           file: "/certs/Bachelors Transcript.pdf"
         }
@@ -155,7 +164,7 @@ export const siteConfig = {
         "Bootstrap"
       ]
     },
-        {
+    {
       category: "Programming Languages",
       skills: [
         "Python",
@@ -174,7 +183,7 @@ export const siteConfig = {
       category: "DevOps & Cloud",
       skills: [
         "Microsoft Azure",
-        "Azure AI Foundry", 
+        "Azure AI Foundry",
         "Oracle Cloud (OCI)",
         "Docker",
         "Kubernetes",
