@@ -72,7 +72,10 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                               href={project.liveLink}
                               target="_blank"
                               rel="noopener noreferrer"
-                              class="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center bg-white border border-gray-200 rounded-full text-gray-900 transition-all duration-300 hover:bg-gray-50 hover:border-gray-300 hover:scale-110"
+                              class="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-full text-white transition-all duration-300 hover:scale-110 hover:brightness-110"
+                              style={{
+                                backgroundColor: siteConfig.accentColor,
+                              }}
                               aria-label={`Visit ${project.name} live site`}
                             >
                               <svg

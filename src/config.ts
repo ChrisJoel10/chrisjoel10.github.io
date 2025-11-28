@@ -18,7 +18,7 @@ export const siteConfig = {
       description:
         "AI-based task manager app with authentication (Google Sign-in), where users can add, edit, and find tasks by talking to an AI assistant powered by Gemini. Upcoming features include voice-enabled access for interactive task management.",
       github: "https://github.com/ChrisJoel10/ai-task-manager",
-      liveLink: "https://ai-task-manager-demo.vercel.app",
+      liveLink: "https://ai-task-manager-mu.vercel.app/",
       status: "Under Development",
       skills: ["Next.js", "Supabase", "Gemini", "Google Auth", "React"],
     },
