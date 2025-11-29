@@ -38,6 +38,28 @@ import "../styles/global.css";
 
       gtag("config", "G-5CH690GYC1");
     </script>
+    <script>
+      // Session tracking for email notification
+      const hasVisited = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("portfolio_visited="));
+
+      console.log("Portfolio visited cookie:", hasVisited);
+
+      if (!hasVisited) {
+        console.log("First visit this session, sending notification...");
+        // Set cookie immediately to prevent multiple calls
+        document.cookie = "portfolio_visited=true; path=/";
+
+        fetch("/api/notify", { method: "POST" })
+          .then((res) => {
+            console.log("Notification API response:", res.status);
+          })
+          .catch((err) => console.error("Failed to send notification", err));
+      } else {
+        console.log("Already visited this session, skipping notification.");
+      }
+    </script>
     <title>{siteConfig.name} - {siteConfig.title}</title>
   </head>
   <body>
