@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "Chris Joel Yesudhas",
-  title: "Software Developer",
+  title: "Software Developer | AI Researcher | Previously at Siemens, GEP & UNB | Master's in Computer Science (4.3/4.3 GPA)",
+  footerTitle: "Software Developer",
   description: "Portfolio website of Chris Joel Yesudhas",
   accentColor: "#1d4ed8",
   social: {
@@ -128,7 +129,7 @@ export const siteConfig = {
     },
     {
       company: "GEP Worldwide, Mumbai, India",
-      title: "Software Engineer | AI Researcher | Previously at Siemens, GEP & UNB | Master's in Computer Science (4.3/4.3 GPA)",
+      title: "Software Engineer",
       dateRange: "Jun 2021 - Aug 2023 (2 years 3 months)",
       bullets: [
         "Delivered enterprise-grade software solutions for clients including Bank of America, Roche, Dupont, and Lenovo, supporting high-availability systems in regulated industries",

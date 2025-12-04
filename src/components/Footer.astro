@@ -17,7 +17,7 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
           {siteConfig.name}
         </h3>
         <p class="text-base text-gray-600">
-          {siteConfig.title}
+          {siteConfig.footerTitle}
         </p>
         <div class="flex gap-x-6">
           <a
@@ -130,6 +130,16 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
             >About</a
           >
           {
+            hasProjects && (
+              <a
+                href="#projects"
+                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                Projects
+              </a>
+            )
+          }
+          {
             hasExperience && (
               <a
                 href="#experience"
@@ -149,16 +159,6 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
               </a>
             )
           }
-                    {
-            hasProjects && (
-              <a
-                href="#projects"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                Projects
-              </a>
-            )
-          }
           {
             hasCerts && (
               <a
@@ -169,7 +169,6 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
               </a>
             )
           }
-
         </nav>
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()}
