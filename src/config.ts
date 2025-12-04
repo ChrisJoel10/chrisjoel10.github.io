@@ -6,7 +6,6 @@ export const siteConfig = {
   social: {
     email: "chrisjoel68157@gmail.com",
     linkedin: "https://www.linkedin.com/in/chris-joel-406aaa1b4/",
-    // twitter: "https://x.com/rfitzio",
     github: "https://github.com/ChrisJoel10",
   },
   aboutMe:
@@ -31,6 +30,46 @@ export const siteConfig = {
         "Built AI agents with LangGraph to automate parsing of Canadian legal documents, generating a benchmark dataset for evaluating LLM performance",
       github: "https://github.com/ChrisJoel10/Canada-Law-Benchmark-Generation",
       skills: ["Python", "Gemini", "GPT-4o", "Selenium", "Webdriver", "LangGraph"],
+    },
+    {
+      name: "Redis in C++ from Scratch",
+      featured: true,
+      description:
+        "Redis clone implemented in C++ from scratch. It supports basic key-value operations, the RESP protocol, and handles concurrent connections using a thread pool.",
+      github: "https://github.com/ChrisJoel10/Build-Redis-in-CPP-from-Scratch",
+      skills: ["Redis", "C++", "Cmake"],
+    },
+    {
+      name: "High Performance Matrix Multiplication in C++",
+      featured: true,
+      description:
+        "Implementation of various matrix multiplication algorithms in C++, ranging from a naive implementation to highly optimized versions using blocking, SIMD (AVX2), and multithreading (OpenMP).",
+      github: "https://github.com/ChrisJoel10/CPP-High-Performance-Matrix-Multiplication",
+      skills: ["C++", "OpenMP"],
+    },
+    {
+      name: "Spatial Analysis using Machine Learning",
+      featured: false,
+      description:
+        "A Python-based spatial analysis project for flood risk assessment using Machine Learning, ArcGIS, and Rasterio.",
+      github: "https://github.com/ChrisJoel10/Spatial-Analysis-using-Machine-Learning",
+      skills: ["Python", "ArcGIS", "Rasterio", "Machine Learning", "Data Visualization"],
+    },
+    {
+      name: "C++ Text Editor (GUI)",
+      featured: false,
+      description:
+        "A GUI text editor built with C++ and Qt 6, featuring standard editing tools, file management, and a clean interface.",
+      github: "https://github.com/ChrisJoel10/Spatial-Analysis-using-Machine-Learning",
+      skills: ["C++", "Qt", "Cmake"],
+    },
+    {
+      name: "C and C++ Text Editor",
+      featured: false,
+      description:
+        "A text editor written in C with a C++ port, featuring raw-mode input handling, file I/O, real-time search, scrolling, status bar, and character-level editing functionality",
+      github: "https://github.com/ChrisJoel10/C-CPP-Text-Editor",
+      skills: ["C", "C++"],
     },
     {
       name: "Student Task Manager",
