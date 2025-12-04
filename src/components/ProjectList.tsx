@@ -25,25 +25,26 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects, accentColor }) => {
         projects.forEach((project) => {
             project.skills?.forEach((skill) => tags.add(skill));
         });
-        return ["All", "Featured", ...Array.from(tags)];
+        return ["All", "Featured", "Live Demo", ...Array.from(tags)];
     }, [projects]);
 
     const filteredProjects = useMemo(() => {
         if (activeFilter === "All") return projects;
         if (activeFilter === "Featured") return projects.filter((p) => p.featured);
+        if (activeFilter === "Live Demo") return projects.filter((p) => p.liveLink);
         return projects.filter((p) => p.skills?.includes(activeFilter));
     }, [projects, activeFilter]);
 
     return (
         <div className="space-y-8">
             {/* Sticky Filter Chips */}
-            <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-md py-4 -mx-4 px-4 sm:-mx-8 sm:px-8 border-b border-gray-100">
+            <div className="sticky top-24 z-30 bg-white/80 backdrop-blur-md py-4 -mx-4 px-4 sm:-mx-8 sm:px-8 border-b border-gray-100 transition-all duration-300">
                 <div className="flex flex-wrap gap-2">
                     {allTags.map((tag) => (
                         <button
                             key={tag}
                             onClick={() => setActiveFilter(tag)}
-                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === tag
+                            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${activeFilter === tag
                                     ? "text-white shadow-lg scale-105"
                                     : "bg-gray-100 text-gray-600 hover:bg-gray-200 hover:scale-105"
                                 }`}
@@ -51,6 +52,27 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects, accentColor }) => {
                                 backgroundColor: activeFilter === tag ? accentColor : undefined,
                             }}
                         >
+                            {tag === "Featured" && (
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    className="w-4 h-4"
+                                    style={{ color: activeFilter === tag ? "white" : accentColor }}
+                                >
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clipRule="evenodd"
+                                    />
+                                </svg>
+                            )}
+                            {tag === "Live Demo" && (
+                                <span className="relative flex h-2 w-2 mr-1">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                </span>
+                            )}
                             {tag}
                         </button>
                     ))}
