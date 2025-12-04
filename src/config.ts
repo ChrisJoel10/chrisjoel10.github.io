@@ -15,6 +15,7 @@ export const siteConfig = {
   projects: [
     {
       name: "AI Task Manager",
+      featured: true,
       description:
         "AI-based task manager app with authentication (Google Sign-in), where users can add, edit, and find tasks by talking to an AI assistant powered by Gemini. Upcoming features include voice-enabled access for interactive task management.",
       github: "https://github.com/ChrisJoel10/ai-task-manager",
@@ -25,6 +26,7 @@ export const siteConfig = {
     },
     {
       name: "Canadian Law Benchmark Dataset",
+      featured: true,
       description:
         "Built AI agents with LangGraph to automate parsing of Canadian legal documents, generating a benchmark dataset for evaluating LLM performance",
       github: "https://github.com/ChrisJoel10/Canada-Law-Benchmark-Generation",
