@@ -128,7 +128,7 @@ export const siteConfig = {
     },
     {
       company: "GEP Worldwide, Mumbai, India",
-      title: "Software Engineer",
+      title: "Software Engineer | AI Researcher | Previously at Siemens, GEP & UNB | Master's in Computer Science (4.3/4.3 GPA)",
       dateRange: "Jun 2021 - Aug 2023 (2 years 3 months)",
       bullets: [
         "Delivered enterprise-grade software solutions for clients including Bank of America, Roche, Dupont, and Lenovo, supporting high-availability systems in regulated industries",
