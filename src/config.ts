@@ -61,7 +61,7 @@ export const siteConfig = {
       featured: false,
       description:
         "A GUI text editor built with C++ and Qt 6, featuring standard editing tools, file management, and a clean interface.",
-      github: "https://github.com/ChrisJoel10/Spatial-Analysis-using-Machine-Learning",
+      github: "https://github.com/ChrisJoel10/CPP-Text-Editor-GUI",
       skills: ["C++", "Qt", "Cmake"],
     },
     {
