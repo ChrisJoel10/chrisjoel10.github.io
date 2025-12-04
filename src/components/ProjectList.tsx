@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import LiveProjectStatus from "./LiveProjectStatus";
 
 interface Project {
@@ -19,12 +19,20 @@ interface ProjectListProps {
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects, accentColor }) => {
     const [activeFilter, setActiveFilter] = useState("Featured");
+    const projectsRef = useRef<HTMLDivElement>(null);
 
     const allTags = useMemo(() => {
         const tags = new Set<string>();
-        projects.forEach((project) => {
-            project.skills?.forEach((skill) => tags.add(skill));
-        });
+        const maxSkills = Math.max(...projects.map((p) => p.skills?.length || 0));
+
+        for (let i = 0; i < maxSkills; i++) {
+            projects.forEach((project) => {
+                const skill = project.skills?.[i];
+                if (skill) {
+                    tags.add(skill);
+                }
+            });
+        }
         return ["All", "Featured", "Live Demo", ...Array.from(tags)];
     }, [projects]);
 
@@ -35,18 +43,29 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects, accentColor }) => {
         return projects.filter((p) => p.skills?.includes(activeFilter));
     }, [projects, activeFilter]);
 
+    const handleFilterClick = (tag: string) => {
+        setActiveFilter(tag);
+        if (projectsRef.current) {
+            // Scroll to the top of the project list container
+            const yOffset = 0; // Offset to account for sticky header height
+            const element = projectsRef.current;
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+        }
+    };
+
     return (
-        <div className="space-y-8">
+        <div className="space-y-8" ref={projectsRef}>
             {/* Sticky Filter Chips */}
             <div className="sticky top-0 z-[60] bg-white/80 backdrop-blur-md py-4 -mx-4 px-4 sm:-mx-8 sm:px-8 border-b border-gray-100 transition-all duration-300">
                 <div className="flex flex-wrap gap-2">
                     {allTags.map((tag) => (
                         <button
                             key={tag}
-                            onClick={() => setActiveFilter(tag)}
+                            onClick={() => handleFilterClick(tag)}
                             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${activeFilter === tag
-                                    ? "text-white shadow-lg scale-105"
-                                    : "bg-gray-100 text-gray-600 hover:bg-gray-200 hover:scale-105"
+                                ? "text-white shadow-lg scale-105"
+                                : "bg-gray-100 text-gray-600 hover:bg-gray-200 hover:scale-105"
                                 }`}
                             style={{
                                 backgroundColor: activeFilter === tag ? accentColor : undefined,
