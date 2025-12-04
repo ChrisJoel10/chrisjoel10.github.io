@@ -18,7 +18,7 @@ interface ProjectListProps {
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({ projects, accentColor }) => {
-    const [activeFilter, setActiveFilter] = useState("All");
+    const [activeFilter, setActiveFilter] = useState("Featured");
 
     const allTags = useMemo(() => {
         const tags = new Set<string>();
@@ -38,7 +38,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects, accentColor }) => {
     return (
         <div className="space-y-8">
             {/* Sticky Filter Chips */}
-            <div className="sticky top-24 z-30 bg-white/80 backdrop-blur-md py-4 -mx-4 px-4 sm:-mx-8 sm:px-8 border-b border-gray-100 transition-all duration-300">
+            <div className="sticky top-0 z-[60] bg-white/80 backdrop-blur-md py-4 -mx-4 px-4 sm:-mx-8 sm:px-8 border-b border-gray-100 transition-all duration-300">
                 <div className="flex flex-wrap gap-2">
                     {allTags.map((tag) => (
                         <button
