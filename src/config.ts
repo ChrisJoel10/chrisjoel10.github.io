@@ -4,6 +4,9 @@ export const siteConfig = {
   footerTitle: "Software Developer",
   description: "Portfolio website of Chris Joel Yesudhas",
   accentColor: "#1d4ed8",
+  // Analytics
+  gaMeasurementId: "G-5CH690GYC1", // Google Analytics 4
+  clarityProjectId: "yb98h6g3q3", // Microsoft Clarity
   social: {
     email: "chrisjoel68157@gmail.com",
     linkedin: "https://www.linkedin.com/in/chris-joel-406aaa1b4/",
