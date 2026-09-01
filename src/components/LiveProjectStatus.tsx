@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { trackEvent } from "../lib/analytics";
 
 interface LiveProjectStatusProps {
     liveLink: string;
@@ -15,6 +16,10 @@ export default function LiveProjectStatus({
 }: LiveProjectStatusProps) {
     const [status, setStatus] = useState<"idle" | "checking" | "available" | "unavailable">("idle");
 
+    const handleLiveClick = () => {
+        trackEvent("project_live_click", { project_name: projectName });
+    };
+
     // If no health check URL, render the simple button (static)
     if (!healthCheckUrl) {
         return (
@@ -22,6 +27,7 @@ export default function LiveProjectStatus({
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleLiveClick}
                 className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-full text-white transition-all duration-300 hover:scale-110 hover:brightness-110"
                 style={{ backgroundColor: accentColor }}
                 aria-label={`Visit ${projectName} live site`}
@@ -81,6 +87,7 @@ export default function LiveProjectStatus({
                     href={liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleLiveClick}
                     className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-gray-200 text-gray-700 text-sm font-medium transition-all duration-300 hover:bg-gray-50 hover:shadow-sm group"
                 >
                     <span className="relative flex h-2.5 w-2.5">
@@ -100,6 +107,7 @@ export default function LiveProjectStatus({
                     href={liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleLiveClick}
                     className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full border border-gray-200 text-gray-600 text-sm font-medium cursor-wait"
                 >
                     <svg
@@ -131,6 +139,7 @@ export default function LiveProjectStatus({
                     href={liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleLiveClick}
                     className="flex items-center gap-2 px-4 py-2 bg-green-50 rounded-full border border-green-200 text-green-700 text-sm font-medium transition-all duration-300 hover:bg-green-100 hover:shadow-sm group"
                 >
                     <span className="relative flex h-2.5 w-2.5">

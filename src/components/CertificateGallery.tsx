@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { siteConfig } from "../config";
 import Modal from "../components/Modal";
+import { trackEvent } from "../lib/analytics";
 
 export default function CertificatesSection() {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -23,9 +24,9 @@ export default function CertificatesSection() {
     );
 
   useEffect(() => {
-    if (popupOpen && window.gtag) {
+    if (popupOpen) {
       const cert = siteConfig.certificates[currentIndex];
-      window.gtag("event", "view_certificate", {
+      trackEvent("view_certificate", {
         event_category: "engagement",
         event_label: cert.name,
       });

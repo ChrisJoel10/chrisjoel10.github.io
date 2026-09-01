@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useRef } from "react";
 import LiveProjectStatus from "./LiveProjectStatus";
+import { trackEvent } from "../lib/analytics";
 
 interface Project {
     name: string;
@@ -45,6 +46,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects, accentColor }) => {
 
     const handleFilterClick = (tag: string) => {
         setActiveFilter(tag);
+        trackEvent("project_filter", { filter: tag });
         if (projectsRef.current) {
             // Scroll to the top of the project list container
             const yOffset = 0; // Offset to account for sticky header height
@@ -140,6 +142,11 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects, accentColor }) => {
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            onClick={() =>
+                                                trackEvent("project_github_click", {
+                                                    project_name: project.name,
+                                                })
+                                            }
                                             className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 hover:bg-gray-700 hover:scale-110"
                                             aria-label={`View ${project.name} source code on GitHub`}
                                         >

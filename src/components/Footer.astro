@@ -23,6 +23,9 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
           <a
             href={`mailto:${siteConfig.social.email}`}
             aria-label="Email"
+            data-track="social_click"
+            data-track-label="email"
+            data-track-location="footer"
             class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
@@ -50,6 +53,9 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
+            data-track="social_click"
+            data-track-label="linkedin"
+            data-track-location="footer"
             class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
@@ -100,6 +106,9 @@ const hasCerts = siteConfig.certificates && siteConfig.certificates.length > 0;
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
+            data-track="social_click"
+            data-track-label="github"
+            data-track-location="footer"
             class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
